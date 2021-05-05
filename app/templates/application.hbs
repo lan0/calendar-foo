@@ -1,7 +1,11 @@
-{{page-title "CalendarFoo"}}
-
 {{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
+
 {{!-- Feel free to remove this! --}}
+
+
+  <PowerCalendar @selected={{arrival}} @onSelect={{action (mut arrival) value="date"}} as |calendar|>
+    <calendar.Nav/>
+    <calendar.Days/>
+  </PowerCalendar>
 
 {{outlet}}
